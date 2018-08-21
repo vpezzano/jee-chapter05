@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="chapter05PU_1"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<mapping-file>META-INF/book_mapping.xml</mapping-file>
+		<class>model.NewsId</class>
+		<class>model.News</class>
+		<class>model.Book</class>
+		<class>model.Book2</class>
+		<class>model.Book3</class>
+		<class>model.Customer</class>
+		<class>model.Customer2</class>
+		<class>model.Customer3</class>
+		<class>model.Customer4</class>
+		<class>model.CreditCard</class>
+		<class>model.CreditCard2</class>
+		<class>model.CD</class>
+		<class>model.onetoone.CustomerItemA</class>
+		<class>model.onetoone.CustomerItemB</class>
+		<class>model.onetoone.AddressItem</class>
+		<class>model.onetomany.ItemA</class>
+		<class>model.onetomany.ItemB</class>
+		<class>model.onetomany.ItemC</class>
+		<class>model.onetomany.ItemLine</class>
+		<class>model.onetomany.NewsWithComments</class>
+		<class>model.onetomany.Comment</class>
+		<class>model.onetomany.NewsWithComments1</class>
+		<class>model.onetomany.Comment1</class>
+		<class>model.manytomany.CompactDisk</class>
+		<class>model.manytomany.Artist</class>
+		<class>model.inheritance.RootItem</class>
+		<class>model.inheritance.BookItem</class>
+		<class>model.inheritance.CDItem</class>
+		<class>model.inheritance.RootItem1</class>
+		<class>model.inheritance.BookItem1</class>
+		<class>model.inheritance.CDItem1</class>
+		<class>model.inheritance.RootItem2</class>
+		<class>model.inheritance.BookItem2</class>
+		<class>model.inheritance.CDItem2</class>
+		<class>model.inheritance.RootItem3</class>
+		<class>model.inheritance.BookItem3</class>
+		<class>model.inheritance.CDItem3</class>
+		<class>model.inheritance.BookItem4</class>
+		<class>model.inheritance.BookItem5</class>		
+		<properties>
+			<property
+				name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" />
+			<!-- The following property will allow the generation of scripts to create 
+				and drop the entire database. -->
+			<property
+				name="javax.persistence.schema-generation.scripts.action"
+				value="drop-and-create" />
+			<property
+				name="javax.persistence.schema-generation.scripts.create-target"
+				value="sampleCreate.ddl" />
+			<property
+				name="javax.persistence.schema-generation.scripts.drop-target"
+				value="sampleDrop.ddl" />
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/spring-jpa" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="chapter05PU_2"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>model.NewsId2</class>
+		<class>model.News2</class>
+		<properties>
+			<property
+				name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" />
+			<!-- The following property will allow the generation of scripts to create 
+				and drop the entire database. -->
+			<property
+				name="javax.persistence.schema-generation.scripts.action"
+				value="drop-and-create" />
+			<property
+				name="javax.persistence.schema-generation.scripts.create-target"
+				value="sampleCreate.ddl" />
+			<property
+				name="javax.persistence.schema-generation.scripts.drop-target"
+				value="sampleDrop.ddl" />
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/spring-jpa" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="chapter05TestPU"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>model.Book</class>
+		<properties>
+			<property
+				name="javax.persistence.schema-generation.database.action"
+				value="drop-and-create" />
+			<property name="javax.persistence.jdbc.driver"
+				value="org.h2.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+		</properties>
+	</persistence-unit>
+</persistence>
