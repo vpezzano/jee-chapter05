@@ -69,7 +69,7 @@
 			<property name="javax.persistence.jdbc.password" value="" />
 		</properties>
 	</persistence-unit>
-	<persistence-unit name="chapter05PU_2"
+<!-- 	<persistence-unit name="chapter05PU_2"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>model.NewsId2</class>
@@ -78,8 +78,8 @@
 			<property
 				name="javax.persistence.schema-generation.database.action"
 				value="drop-and-create" />
-			<!-- The following property will allow the generation of scripts to create 
-				and drop the entire database. -->
+			The following property will allow the generation of scripts to create 
+				and drop the entire database.
 			<property
 				name="javax.persistence.schema-generation.scripts.action"
 				value="drop-and-create" />
@@ -112,5 +112,5 @@
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="" />
 		</properties>
-	</persistence-unit>
+	</persistence-unit> -->
 </persistence>
